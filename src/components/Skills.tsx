@@ -147,13 +147,35 @@ const Skills = () => {
           <div className="mt-20">
             <h3 className="text-center text-2xl font-semibold text-navy-dark mb-10">Technologies I Work With</h3>
             
-            {/* Fixed tech logo scrolling container */}
+            {/* Optimized tech logo scrolling container with different speeds for mobile/desktop */}
             <div className="overflow-hidden w-full">
-              <div className="flex animate-tech-scroll whitespace-nowrap">
+              <div className="hidden md:flex animate-tech-scroll whitespace-nowrap will-change-transform">
                 {duplicatedTechLogos.map((tech, index) => (
                   <div key={index} className="flex flex-col items-center mx-8">
-                    <img src={tech.image} alt={tech.name} className="w-16 h-16" />
+                    <img 
+                      src={tech.image} 
+                      alt={tech.name} 
+                      className="w-16 h-16" 
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <p className="mt-2 text-sm text-gray-700">{tech.name}</p>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Mobile version with faster animation */}
+              <div className="flex md:hidden animate-tech-scroll-mobile whitespace-nowrap will-change-transform">
+                {duplicatedTechLogos.map((tech, index) => (
+                  <div key={index} className="flex flex-col items-center mx-5">
+                    <img 
+                      src={tech.image} 
+                      alt={tech.name} 
+                      className="w-12 h-12" 
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <p className="mt-1.5 text-xs text-gray-700">{tech.name}</p>
                   </div>
                 ))}
               </div>

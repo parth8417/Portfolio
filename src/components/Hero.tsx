@@ -99,13 +99,13 @@ const Hero = () => {
           </Button>
         </div>
         
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-10 left-0 right-0 mx-auto flex justify-center animate-bounce">
           <button 
             onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})} 
-            className="text-white opacity-80 hover:opacity-100 transition-opacity hover:text-primary" 
+            className="bg-gray-800/70 hover:bg-primary p-3 rounded-full text-white shadow-lg transition-all duration-300 hover:scale-110" 
             aria-label="Scroll down"
           >
-            <ArrowDown size={32} />
+            <ArrowDown size={24} />
           </button>
         </div>
       </div>

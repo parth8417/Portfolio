@@ -146,10 +146,10 @@ const About = () => {
                       
                       <h4 className="text-lg font-semibold text-navy-dark flex items-center">
                         <GraduationCap className="mr-2 h-5 w-5 text-primary" /> 
-                        M.Sc. in Information Technology
+                        I M.Sc. in Information Technology
                       </h4>
                       <p className="text-gray-700 mt-1">Silver Oak University</p>
-                      <p className="text-sm text-gray-500 mt-1">2022 - 2024 • CGPA: 8.5/10</p>
+                      <p className="text-sm text-gray-500 mt-1">2022 - 2026 • CGPA: 8.5/10</p>
                     </div>
                     
                     <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-1 before:w-4 before:h-4 before:bg-primary before:rounded-full before:z-10 before:ring-4 before:ring-primary/20 timeline-item">
