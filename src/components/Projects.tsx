@@ -23,7 +23,7 @@ const Projects = () => {
       tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "MongoDB"],
       image: "https://placehold.co/600x400/0f172a/FFFFFF/webp?text=Portfolio+Website",
       github: "https://github.com/parth8417/portfolio",
-      demo: "#",
+      demo: "https://www.theparth.me/",
       icon: <Layout className="h-5 w-5 text-indigo-500" />
     },
     {
@@ -41,7 +41,7 @@ const Projects = () => {
       tags: ["Next.js", "Firebase", "Tailwind CSS", "JavaScript"],
       image: "https://placehold.co/600x400/1a365d/FFFFFF/webp?text=WebBuzz",
       github: "https://github.com/parth8417/WebBuzz",
-      demo: "https://web-buzz-weld.vercel.app",
+      demo: "https://webbuzz-tech.vercel.app/",
       icon: <Globe className="h-5 w-5 text-sky-500" />
     },
     // {
