@@ -28,11 +28,11 @@ const Projects = () => {
     },
     {
       title: "MyFoodis",
-      description: "An online food ordering platform with a modern and responsive design, featuring product listings, cart management, secure checkout, and a seamless user experience.",
+      description: "An online food ordering platform with responsive UI, dynamic product listings, cart & checkout, and an integrated admin panel for seamless management.",
       tags: ["React", "MongoDB", "Express Js", "JavaScript"],
       image: "https://placehold.co/600x400/1a365d/FFFFFF/webp?text=MyFoodis",
-      github: "https://github.com/parth8417/myfoodis",
-      demo: "https://myfoodis.vercel.app",
+      github: "https://github.com/parth8417/Myfoodie",
+      demo: "https://myfoodie.vercel.app/",
       icon: <Laptop className="h-5 w-5 text-green-500" />
     },
     {
