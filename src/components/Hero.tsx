@@ -56,30 +56,30 @@ const Hero = () => {
         <div className="hidden md:block absolute bottom-1/3 right-1/4 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-primary/10 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAgTSA2MCAxMCBMIDYwIDAgNTAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjA0MjgwIiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC4xNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-5 sm:opacity-10"></div>
       </div>
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 z-10 text-center">
-        <div className="max-w-md sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 z-10 text-center">
+        <div className="max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
         <div className={`flex flex-col items-center mb-4 sm:mb-6 md:mb-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {/* Avatar with animated ring and shadow - Responsive sizes */}
           <div className="relative mb-4 sm:mb-6 md:mb-8">
             <div className="absolute inset-0 rounded-full animate-spin-slow border-2 sm:border-3 md:border-4 border-primary/40 border-dashed"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-blue-400/60 rounded-full blur-lg sm:blur-xl opacity-40 animate-pulse-soft"></div>
-            <Avatar className="h-28 w-28 sm:h-36 sm:w-36 lg:h-44 lg:w-44 xl:h-48 xl:w-48 2xl:h-52 2xl:w-52 border-2 sm:border-3 lg:border-4 xl:border-[5px] border-primary/80 shadow-xl lg:shadow-2xl xl:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] relative">
+            <Avatar className="h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-36 lg:w-36 xl:h-40 xl:w-40 border-2 sm:border-3 md:border-4 border-primary/80 shadow-xl md:shadow-2xl relative">
               <AvatarImage 
                 src="/profile-pic.jpg" 
                 alt="Parth Panchal" 
                 className="object-cover object-center h-full w-full"
               />
-              <AvatarFallback className="bg-primary text-white text-lg sm:text-2xl md:text-3xl font-bold">PP</AvatarFallback>
+              <AvatarFallback className="bg-primary text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">PP</AvatarFallback>
             </Avatar>
           </div>
           {/* Name and animated typing effect - Responsive text sizes */}
-          <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-2 animate-fade-in text-center px-2">
+          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 animate-fade-in text-center px-2">
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary">Parth Panchal</span>
           </h1>
-          <div className="flex justify-center items-center gap-2 mb-3 sm:mb-4 lg:mb-6 min-h-[32px] sm:min-h-[36px] lg:min-h-[40px] xl:min-h-[44px] px-2">
-            <span className="text-primary font-semibold text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl tracking-wide animate-fade-in text-center" style={{animationDelay: '0.1s'}}>
+          <div className="flex justify-center items-center gap-2 mb-3 sm:mb-4 min-h-[32px] sm:min-h-[36px] md:min-h-[40px] px-2">
+            <span className="text-primary font-semibold text-base sm:text-lg md:text-xl lg:text-2xl tracking-wide animate-fade-in text-center" style={{animationDelay: '0.1s'}}>
               {typedText}
-              <span className={`ml-1 inline-block w-1.5 sm:w-2 lg:w-2.5 h-5 sm:h-6 lg:h-7 xl:h-8 align-middle bg-primary rounded-sm ${isPaused ? 'opacity-0' : 'opacity-100'} transition-opacity duration-200`}></span>
+              <span className={`ml-1 inline-block w-1.5 sm:w-2 h-5 sm:h-6 md:h-7 align-middle bg-primary rounded-sm ${isPaused ? 'opacity-0' : 'opacity-100'} transition-opacity duration-200`}></span>
             </span>
           </div>
           <div className="w-24 sm:w-28 md:w-32 h-1 sm:h-1.5 bg-gradient-to-r from-primary to-blue-400 mx-auto rounded-full mb-3 sm:mb-4 relative">
@@ -106,11 +106,11 @@ const Hero = () => {
           </div>
         </div>
         {/* Call to action buttons - Responsive sizing and spacing */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 lg:gap-6 xl:gap-8 animate-fade-in px-4" style={{animationDelay: '0.4s'}}>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in px-4" style={{animationDelay: '0.4s'}}>
           <Button 
             variant="default" 
             size="lg" 
-            className="bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg hover:shadow-primary/30 relative group overflow-hidden font-semibold text-base lg:text-lg xl:text-xl px-8 lg:px-10 xl:px-12 py-4 lg:py-5 xl:py-6 w-full sm:w-auto touch-manipulation"
+            className="bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg hover:shadow-primary/30 relative group overflow-hidden font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto touch-manipulation"
             onClick={scrollToProjects}
           >
             <span className="absolute inset-0 w-full h-full bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-700"></span>
@@ -120,7 +120,7 @@ const Hero = () => {
             variant="outline" 
             size="lg" 
             onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} 
-            className="border-white/30 text-slate-50 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg relative group overflow-hidden font-semibold text-base lg:text-lg xl:text-xl px-8 lg:px-10 xl:px-12 py-4 lg:py-5 xl:py-6 w-full sm:w-auto touch-manipulation"
+            className="border-white/30 text-slate-50 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg relative group overflow-hidden font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto touch-manipulation"
           >
             <span className="absolute inset-0 w-full h-full bg-white/5 transform -skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-700"></span>
             <span className="relative z-10">Contact Me</span>
