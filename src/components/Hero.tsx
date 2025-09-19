@@ -90,7 +90,7 @@ const Hero = () => {
             Passionate about building modern, scalable web applications and delivering seamless user experiences.
           </p>
           {/* Social links row - Responsive sizing and spacing */}
-          <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 animate-fade-in" style={{animationDelay: '0.3s'}}>
+          <div className="flex justify-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6 animate-fade-in" style={{animationDelay: '0.3s'}}>
             <a href="https://github.com/parth8417" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="group p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-primary/80 transition-all duration-300 shadow-lg text-white touch-manipulation">
               <Github size={18} className="sm:w-[22px] sm:h-[22px] group-hover:scale-110 transition-transform" />
             </a>
