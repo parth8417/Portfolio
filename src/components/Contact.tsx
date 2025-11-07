@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, Github, Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -142,13 +142,13 @@ const Contact = () => {
                     <Linkedin size={18} />
                   </a>
                   <a 
-                    href="https://twitter.com/parthpanchal" 
+                    href="https://wa.me/916354033831" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center"
-                    aria-label="Twitter"
+                    className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center"
+                    aria-label="WhatsApp"
                   >
-                    <Twitter size={18} />
+                    <MessageCircle size={18} />
                   </a>
                   <a 
                     href="https://www.instagram.com/parth_panchal_1694/" 

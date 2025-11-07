@@ -173,6 +173,17 @@
   background: linear-gradient(135deg, rgba(42, 72, 120, 0.8) 0%, rgba(26, 54, 93, 0.9) 100%);
 }
 
+/* Profile avatar glow effect */
+.profile-avatar-glow::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, rgba(59, 130, 246, 0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
 /* Tech stack scrolling container - Fixed animation */
 @keyframes tech-scroll {
   0% { transform: translateX(0); }

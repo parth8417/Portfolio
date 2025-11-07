@@ -41,7 +41,7 @@ const Projects = () => {
       tags: ["Next.js", "Firebase", "Tailwind CSS", "JavaScript"],
       image: "https://placehold.co/600x400/1a365d/FFFFFF/webp?text=WebBuzz",
       github: "https://github.com/parth8417/WebBuzz",
-      demo: "https://webbuzz-tech.vercel.app/",
+      demo: "https://webbuzz.tech/",
       icon: <Globe className="h-5 w-5 text-sky-500" />
     },
     // {
