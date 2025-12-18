@@ -28,14 +28,51 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined;
+    if (!accessKey) {
+      toast({
+        title: 'Configuration error',
+        description: 'Email service is not configured.',
+        variant: 'destructive'
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
-      // Use MongoDB service to save contact form
-      const result = await contactService.submitContactDirect(formData);
-      
-      if (!result.success) {
-        throw new Error(result.error || 'Failed to submit form');
+      const payload = {
+        access_key: accessKey,
+        subject: `Portfolio Contact: ${formData.subject}`,
+        from_name: formData.name,
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        botcheck: '',
+      };
+
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const raw = await res.text();
+      let data;
+      try {
+        data = JSON.parse(raw);
+      } catch {
+        console.error('Web3Forms response (not JSON):', raw.substring(0, 500));
+        throw new Error('Invalid response from email service');
+      }
+
+      if (!res.ok || !data?.success) {
+        const msg = data?.message || data?.error || 'Failed to send message';
+        throw new Error(msg);
       }
       
       toast({
@@ -53,7 +90,7 @@ const Contact = () => {
       console.error("Error sending message:", error);
       toast({
         title: "Something went wrong",
-        description: "Your message could not be sent. Please try again later.",
+        description: error instanceof Error ? error.message : "Your message could not be sent. Please try again later.",
         variant: "destructive"
       });
     } finally {
